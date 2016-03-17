@@ -36,9 +36,9 @@
             </tr>
             <c:forEach var="row" items="${result.rows}">
                 <tr>
-                    <td><c:out value="${row.id}"/></td>
+                    <td><c:out value="${row.id_prod}"/></td>
                     <td><c:out value="${row.nome}"/></td>
-                    <td><c:out value="${row.modelo}"/></td>
+                    <td><c:out value="${row.descricao}"/></td>
                     <td><c:out value="${row.valor}"/></td>
                     <td><c:out value="${row.quantidade}"/></td>
                 </tr>

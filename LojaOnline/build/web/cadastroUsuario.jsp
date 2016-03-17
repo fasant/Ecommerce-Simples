@@ -22,6 +22,7 @@
                     <tr>
                         <td>Nome: </td>
                         <td><input type="text" name="nome" value="" /></td>
+                    <!--Verificar se já existe usuario com mesmo login.-->    
                     </tr>
                     <tr>
                         <td>Senha: </td>

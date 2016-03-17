@@ -25,7 +25,7 @@
         <sql:update dataSource="${minhaBase}" var="resultado">
             UPDATE produto 
             SET quantidade = quantidade -1 
-            WHERE id=<%=request.getParameter("comprarProduto")%>
+            WHERE id_prod=<%=request.getParameter("comprarProduto")%>
         </sql:update>
         <c:redirect url="exibeProdutos.jsp" />
     </body>

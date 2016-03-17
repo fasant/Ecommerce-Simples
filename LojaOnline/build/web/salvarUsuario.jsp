@@ -31,7 +31,7 @@ e armazenamento nas variáveis globais --%>
         <sql:setDataSource var="minhaBase" driver="com.mysql.jdbc.Driver"
                            url="jdbc:mysql://localhost/eloja" user="root" password="senha"/>
         <sql:update dataSource="${minhaBase}" var="resultado">
-            INSERT INTO usuario VALUES ('<%= nome%>','<%= senha%>');
+            INSERT INTO usuario VALUES ('<%= nome%>','<%= senha%>','COMUM');
         </sql:update>
         <p align="center">Usuário Cadastrado com sucesso!</p>
         <br>

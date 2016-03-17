@@ -1,10 +1,11 @@
-
+DROP TABLE IF EXISTS produto;
 CREATE TABLE produto(
-	id int not null,
+	id_prod int PRIMARY KEY AUTO_INCREMENT,
 	nome varchar(20) not null,
-	modelo varchar(50),
+	descricao varchar(50),
 	valor numeric not null,
-	quantidade int); 
+	quantidade int 
+	);  
 
 insert into produto values(	0	,'Vans do Fer',	'	Vermelho	'	,	20	,	1	);
 insert into produto values(	1	,'Vans do Fer',	'	Verde	'	,	23	,	2	);
@@ -29,4 +30,5 @@ insert into produto values(	19	,'Vans do Fer',	'	Verde Limão	'	,	45	,	2	);
 insert into produto values(	20	,'Vans do Fer',	'	Preto e Vermelho	'	,	44	,	4	);
 insert into produto values(	21	,'Vans do Fer',	'	Zebrinha	'	,	24	,	2	);
 insert into produto values(	22	,'Vans do Fer',	'	Oncinha	'	,	27	,	24	);
+SELECT * FROM produto;
 
