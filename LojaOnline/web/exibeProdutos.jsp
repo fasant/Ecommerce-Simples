@@ -1,7 +1,9 @@
 <%-- 
-    Document   : exibeProdutos
-    Created on : Mar 2, 2016, 3:25:00 PM
-    Author     : Fabio Santos
+    Project     : e-KipeNiko Shop
+    Customer    : IFSP - DWE-I6
+    P.O.        : Profº Mestre Leandro Camara Ledel
+    Dev. Group  : Equipenico - Fábio Santos, Márcio Ricardo, Fernando Brito
+    Document    : exibeProdutos.jsp
 --%>
 
 <%@ page import="java.io.*,java.util.*,java.sql.*"%>
@@ -13,12 +15,24 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>CompreTudo-Produtos</title>
+        <title>Produtos e-KipeNiko Shop</title>
     </head>
     <body bgcolor="f0f0f0">
-        <h1>Bem Vindo à CompreTudo.com</h1>
-        <h3>Aqui você compra os Vans do Fer Com mais qualidade!</h3>
-        <br>
+        <header>
+            <table id="tabela_titulo">
+                <tr>
+                    <td id="coluna_titulo">
+                        <label ><b>e-KipeNiko Shop</b></label>
+                    </td>
+                    <!--<td id="coluna_info_usuario">
+                        <label>DEV, INSERIR USER AQUI!!!</label>
+                    </td>-->
+                </tr>
+                <tr>
+                <h3>Aqui você compra os Vans do Fer Com mais qualidade!</h3>
+                </tr>
+            </table>
+        </header>
         <h3>Confira nossos produtos:</h3>
         <br>
         <sql:setDataSource var="minhaBase" driver="com.mysql.jdbc.Driver"
@@ -50,5 +64,10 @@
             <input type="submit" value="Comprar" />
         </form>
         <a href="index.html">Página Principal</a>
+        <footer>
+            <p><b>Por: </b>Equipenico - IFSP/Hto<br>
+                <a href="http://ifsp.hto.edu.br">ENTRE EM CONTATO</a>
+            </p>
+        </footer>
     </body>
 </html>

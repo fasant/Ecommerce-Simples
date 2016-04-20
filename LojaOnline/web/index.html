@@ -1,20 +1,143 @@
+<!--
+    Project     : e-KipeNiko Shop
+    Customer    : IFSP - DWE-I6
+    P.O.        : Profº Mestre Leandro Camara Ledel
+    Dev. Group  : Equipenico - Fábio Santos, Márcio Ricardo, Fernando Brito
+-->
 <!DOCTYPE html>
 <!--
-
 -->
 <html>
     <head>
-        <title>Loja Compre Tudo</title>
+        <title>Bem Vindo a e-KipeNiko Shop</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            html, body{
+                font-family: verdana;
+                //width: 400px;
+            }
+            header, #tabela_titulo{
+                width: 100%;
+                text-align: center;
+                color: red;
+                font-size: 50px;
+            }
+            nav, #tabela_menu{
+                width: 100%;
+                text-align: center;
+                color: red;
+                font-size: 16px;
+                background-color: #00dd00;
+            }
+            fieldset{
+                background-color: #cccccc;
+                width: 98%px;
+                border-width: 3px;
+                border-color: #005000;
+                text-align: center;
+                font-size: 13px;
+            }
+            legend{
+                color: #003300;
+                font-size: 13px;
+            }
+            .botao{
+                float: right;
+                width: 100px;
+            }
+            .deletar{
+                font-size: 10px;
+                color: black;
+                text-align: left;
+                font-style: italic;
+            }
+            footer{
+                font-size: 10px;
+                text-align: center;
+                background-color: #008000;
+            }
+            .contato{
+                color: #ffffff;
+            }
+        </style>
+
     </head>
     <body>
-        <div>
-            <h1>Bem vindo à CompreTudo.com!</h1>
-            <hr>
-            <a href="exibeProdutos.jsp">Compre</a>
-            <br>
-            <a href="cadastroUsuario.jsp">Cadastre-se</a>
-        </div>
+        <header>
+            <table id="tabela_titulo">
+                <tr>
+                    <td id="coluna_titulo">
+                        <label ><b>e-KipeNiko Shop</b></label>
+                    </td>
+                    <!--<td id="coluna_info_usuario">
+                        <label>DEV, INSERIR USER AQUI!!!</label>
+                    </td>-->
+                </tr>
+            </table>
+        </header>
+        <nav>
+            <table id="tabela_menu">
+                <tr>
+                    <td class="menu">
+                        <a href="cadastroUsuario.jsp">Cadastre-se</a>
+                    </td>
+                    <td class="menu">
+                        <a href="exibeProdutos.jsp">Comprar</a>
+                    </td>
+                    <td class="menu">
+                        <a href="">Nossa História</a>
+                    </td>
+                </tr>
+            </table>
+        </nav>
+        <section>
+            <fieldset>
+                <legend>O que você encontra aqui: </legend>
+                <p>Valores</p>
+                <p>Estética da Sensibilidade: Colocar em realce a prática social, o fazer
+                    humano, por meio da valorização da criatividade, da curiosidade, da inventividade. A
+                    organização curricular deverá ser impregnada por situações práticas e ambientes de
+                    aprendizagem adequados:</p>
+                <p>
+                    a) Política da Igualdade: Colocar em destaque o aprender a aprender e o ensinar a
+                    pensar, garantindo igualdade de oportunidades e diversidade de tratamento, ou
+                    seja, de respeito a valores que reconheçam as diferenças para promover a
+                    igualdade entre os desiguais;</p>
+                <p>
+                    b) Ética da Identidade: O processo de construção de identidades deverá respeitar a
+                    autonomia dos valores e das escolhas de cada um;</p>
+                <p>
+                    c) Aprender continuadamente e trabalhar participativamente serão valores
+                    essenciais, sempre em busca de transformação e renovação;</p>
+                <p>
+                    d) Preservação do Ensino Público de Qualidade: Baseado nos princípios de que a
+                    educação é um bem comum, direito de todos e dever do Estado e da família (Art.
+                    205, Constituição Federal), o IFSP respeita o compromisso de oferecer sempre
+                    cursos de qualidade, destacando-se pela busca da excelência no panorama da
+                    Educação Pública Nacional;</p>
+                <p>
+                    e) Gestão Democrática e Participativa: O IFSP se caracteriza pela gestão
+                    participativa, em que a comunidade tem papel decisivo e atuante em todas as
+                    questões. A inteligência organizacional não nasce da cabeça dos dirigentes, mas é
+                    algo coletivo, que emerge a partir do momento em que se reconhecem as forças e
+                    os recursos internos (Gardner);</p>
+                <p>
+                    f) Valorização do trabalho de cada servidor;</p>
+                <p>
+                    g) Orgulho do trabalho da instituição;</p>
+                <p>
+                    h) Integração e Inovação: O IFSP liga-se intrinsecamente a todas as outras
+                    instituições federais de ensino público que estabelecem uma rede educativa
+                    inovadora, composta por laços de qualidade, ética, gestão participativa, autonomia,
+                    flexibilidade e diversidade.</p>
+            </fieldset>
+        </section>
+        <footer>
+            <p><b>Por: </b>Equipenico - IFSP/Hto<br>
+                <a class="contato" href="http://ifsp.hto.edu.br"><b>ENTRE EM CONTATO</b></a>
+            </p>
+        </footer>
     </body>
 </html>

@@ -1,7 +1,9 @@
 <%-- 
-    Document   : salvarUsuario
-    Created on : Mar 2, 2016, 1:00:04 PM
-    Author     : Fabio Santos
+    Project     : e-KipeNiko Shop
+    Customer    : IFSP - DWE-I6
+    P.O.        : Profº Mestre Leandro Camara Ledel
+    Dev. Group  : Equipenico - Fábio Santos, Márcio Ricardo, Fernando Brito
+    Document    : salvarUsuario.jsp
 --%>
 
 <%@page import="java.io.*,java.util.*,java.sql.*"%>
@@ -29,12 +31,17 @@ e armazenamento nas variáveis globais --%>
     </head>
     <body bgcolor="f0f0f0">
         <sql:setDataSource var="minhaBase" driver="com.mysql.jdbc.Driver"
-                           url="jdbc:mysql://localhost/eloja" user="root" password="senha"/>
+                           url="jdbc:mysql://localhost/eloja" user="root" password=""/>
         <sql:update dataSource="${minhaBase}" var="resultado">
             INSERT INTO usuario VALUES ('<%= nome%>','<%= senha%>','COMUM');
         </sql:update>
         <p align="center">Usuário Cadastrado com sucesso!</p>
         <br>
         <p align="center"><a href="index.html">Página Principal</a></p>
+        <footer>
+            <p><b>Por: </b>Equipenico - IFSP/Hto<br>
+                <a href="http://ifsp.hto.edu.br">ENTRE EM CONTATO</a>
+            </p>
+        </footer>
     </body>
 </html>
