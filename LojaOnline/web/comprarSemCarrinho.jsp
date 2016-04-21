@@ -18,18 +18,32 @@
         <title>Comprar na e-KipeNiko Shop</title>
     </head>
     <body>
-        Id do Produto: <%= request.getParameter("comprarProduto")%>
+        <% int idProduto = Integer.parseInt(request.getParameter("idProduto"));%>
         <br>
         <sql:setDataSource var="minhaBase" driver="com.mysql.jdbc.Driver"
                            url="jdbc:mysql://localhost/eloja" user="root" password=""/>
 
-        <!--Verificar se quantidade é maior que ZERO-->
-        <sql:update dataSource="${minhaBase}" var="resultado">
-            UPDATE produto 
-            SET quantidade = quantidade -1 
-            WHERE id_prod=<%=request.getParameter("comprarProduto")%>
-        </sql:update>
-        <c:redirect url="exibeProdutos.jsp" />
+        <sql:query dataSource="${minhaBase}" var="result">
+            SELECT * FROM produto WHERE idProduto = <%= idProduto%>;
+        </sql:query>
+        <table border="1" width="100%">
+            <tr>
+                <th>ID do Produto</th>
+                <th>Nome</th>
+                <th>Preço</th>
+            </tr>
+            <c:forEach var="row" items="${result.rows}">
+                <tr>
+                    <td><c:out value="${row.idProduto}"/></td>
+                    <td><c:out value="${row.nomeProduto}"/></td>
+                    <td><c:out value="${row.valor}"/></td>
+                </tr>
+            </c:forEach>
+        </table>
+        <form action="efetuaCompra.jsp" method="POST">
+            Produto Id: <input type="integer" name="idProduto" value="<%= idProduto %>" />
+            <input type="submit" value="Comprar" />
+        </form>
         <footer>
             <p><b>Por: </b>Equipenico - IFSP/Hto<br>
                 <a href="http://ifsp.hto.edu.br">ENTRE EM CONTATO</a>

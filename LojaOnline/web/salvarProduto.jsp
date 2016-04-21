@@ -14,28 +14,30 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%-- Declaração de variáveis globais --%>
 <%!
-    String nome, senha, id;
+    String nome, valor, quantidade;
 %>
 <%-- Leitura das variáveis recebidas por POST
 e armazenamento nas variáveis globais --%>
 <%
     nome = request.getParameter("nome");
-    senha = request.getParameter("senha");
-    id = request.getParameter("id");
+    valor = request.getParameter("valor");
+    quantidade = request.getParameter("quantidade");
 %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Salvar Dados</title>
+        <title>Salvar Produto</title>
     </head>
     <body bgcolor="f0f0f0">
         <sql:setDataSource var="minhaBase" driver="com.mysql.jdbc.Driver"
                            url="jdbc:mysql://localhost/eloja" user="root" password=""/>
         <sql:update dataSource="${minhaBase}" var="resultado">
-            INSERT INTO usuario VALUES ('<%= nome%>','<%= senha%>','COMUM');
+            INSERT INTO produto VALUES (null,'<%= nome%>',<%= valor%>,<%= quantidade%>);
         </sql:update>
-        <p align="center">Usuário Cadastrado com sucesso!</p>
+        <p align="center">Produto Cadastrado com sucesso!</p>
+        <br>
+        <p align="center"><a href="cadastraProduto.jsp">Cadastrar Mais Produtos</a></p>
         <br>
         <p align="center"><a href="index.html">Página Principal</a></p>
         <footer>

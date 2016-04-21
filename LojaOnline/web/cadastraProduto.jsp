@@ -71,7 +71,7 @@
                 </tr>
             </table>
         </nav>
-        <form action="salvarUsuario.jsp" method="POST">
+        <form action="salvarProduto.jsp" method="POST">
             <table border="0" align="center">
                 <thead>
                     <tr>
@@ -85,8 +85,12 @@
                         <!--Verificar se já existe usuario com mesmo login.-->    
                     </tr>
                     <tr>
-                        <td>Senha: </td>
-                        <td><input type="password" name="senha" value="" /></td>
+                        <td>Valor: </td>
+                        <td><input type="numeric" name="valor" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Quantidade: </td>
+                        <td><input type="numeric" name="quantidade" value="" /></td>
                     </tr>
                     <tr>
                         <td colspan="2" align="center">

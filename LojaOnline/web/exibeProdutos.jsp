@@ -36,7 +36,7 @@
         <h3>Confira nossos produtos:</h3>
         <br>
         <sql:setDataSource var="minhaBase" driver="com.mysql.jdbc.Driver"
-                           url="jdbc:mysql://localhost/eloja" user="root" password="senha"/>
+                           url="jdbc:mysql://localhost/eloja" user="root" password=""/>
         <sql:query dataSource="${minhaBase}" var="result">
             SELECT * from produto;
         </sql:query>
@@ -44,15 +44,13 @@
             <tr>
                 <th>ID do Produto</th>
                 <th>Nome</th>
-                <th>Descrição</th>
                 <th>Preço</th>
                 <th>Quantidade</th>
             </tr>
             <c:forEach var="row" items="${result.rows}">
                 <tr>
-                    <td><c:out value="${row.id_prod}"/></td>
-                    <td><c:out value="${row.nome}"/></td>
-                    <td><c:out value="${row.descricao}"/></td>
+                    <td><c:out value="${row.idProduto}"/></td>
+                    <td><c:out value="${row.nomeProduto}"/></td>
                     <td><c:out value="${row.valor}"/></td>
                     <td><c:out value="${row.quantidade}"/></td>
                 </tr>
@@ -60,7 +58,7 @@
         </table>
         <br>
         <form action="comprarSemCarrinho.jsp" method="POST">
-            Comprar Produto Id: <input type="integer" name="comprarProduto" value="" />
+            Comprar Produto Id: <input type="integer" name="idProduto" value="" />
             <input type="submit" value="Comprar" />
         </form>
         <a href="index.html">Página Principal</a>
